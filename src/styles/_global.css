@@ -1,0 +1,30 @@
+html {
+  background-color: #23171f;
+  font-family: sans-serif;
+}
+
+h1 {
+	color: #ffe3b7;
+	font-family: "Courier New", monospace;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+button {
+	background-color: #a35b5e;
+	border: none;
+	border-radius: 5px;
+
+	font-size: 1em;
+	font-family: "Courier New", monospace;
+	font-weight: bold;
+	letter-spacing: 1px;
+
+	transition-duration: 0.2s;
+
+	padding: 3px;
+}
+
+button:hover {
+	background-color: #e2caa3;
+}
