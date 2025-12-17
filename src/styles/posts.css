@@ -6,6 +6,7 @@
 }
 
 .grid-post {
+	width: 80vw;
 	height: auto;
 }
 
@@ -84,6 +85,7 @@
 @media screen and (min-width: 636px)
 {
 	.grid-post {
-		width: 30%;
+		width: auto;
+		max-width: 29%;
 	}
 }
