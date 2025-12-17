@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/project.astro'
 title: 'Nightjar'
 pub_date: 2024-11-22
 image: '/src/media/projects/proj-nightjar/thumbnail.png'

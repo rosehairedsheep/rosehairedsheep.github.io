@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/project.astro'
 title: 'Hornbill'
 pub_date: 2023-08-13
 image: '/src/media/projects/proj-hornbill/thumbnail.png'

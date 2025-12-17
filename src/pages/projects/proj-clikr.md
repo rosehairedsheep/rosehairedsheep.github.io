@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/project.astro'
 title: 'Clikr'
 pub_date: 2025-06-10
 image: '/src/media/projects/proj-clikr/thumbnail.png'

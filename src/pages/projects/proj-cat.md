@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/project.astro'
 title: 'Cat'
 pub_date: 2024-10-16
 image: '/src/media/projects/proj-cat/thumbnail.png'

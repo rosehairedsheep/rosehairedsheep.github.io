@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/project.astro'
 title: 'Magpie'
 pub_date: 2024-07-13
 image: '/src/media/projects/proj-magpie/thumbnail.png'

@@ -9,6 +9,12 @@ h1 {
 	letter-spacing: 1px;
 }
 
+p {
+	color: #faeee9;
+	font-family: "Verdana", sans-serif;
+	line-height: 150%;
+}
+
 button {
 	background-color: #a35b5e;
 	border: none;

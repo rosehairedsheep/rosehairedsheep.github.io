@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/project.astro'
 title: 'Robin'
 pub_date: 2025-04-06
 image: '/src/media/projects/proj-robin/thumbnail.png'

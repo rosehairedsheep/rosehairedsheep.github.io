@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/project.astro'
 title: 'Sunbird'
 pub_date: 2024-03-24
 image: '/src/media/projects/proj-sunbird/thumbnail.png'

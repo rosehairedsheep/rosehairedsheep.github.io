@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/project.astro'
 title: 'Portfolio'
 pub_date: 2025-12-17
 image: '/src/media/projects/proj-portfolio/thumbnail.png'

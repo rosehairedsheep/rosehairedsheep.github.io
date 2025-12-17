@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/project.astro'
 title: 'Kingfisher'
 pub_date: 2024-09-07
 image: '/src/media/projects/proj-kingfisher/thumbnail.png'

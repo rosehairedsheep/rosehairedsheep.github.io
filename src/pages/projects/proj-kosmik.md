@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/project.astro'
 title: 'Kosmik'
 pub_date: 2025-08-31
 image: '/src/media/projects/proj-kosmik/thumbnail.png'

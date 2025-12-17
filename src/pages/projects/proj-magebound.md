@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/project.astro'
 title: 'Magebound'
 pub_date: 2024-12-18
 image: '/src/media/projects/proj-magebound/thumbnail.png'
