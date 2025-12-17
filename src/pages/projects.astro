@@ -1,12 +1,22 @@
 ---
 import '../styles/_global.css'
 
+import type { MarkdownInstance } from 'astro';
+interface Frontmatter {
+    url: string;
+	pub_date: string;
+	image: [key: string, value: string];
+    description: string;
+	contribution: string;
+	tags: [key: string, value: string[]]
+}
+
 import Base from '../layouts/base.astro'
 import Content from '../components/content.astro'
 import PostPreview from '../components/posts/preview.astro'
 
 const page_title = "projects"
-const all_projects = Object.values(import.meta.glob('./projects/*.md', { eager: true }));
+const all_projects = Object.values(import.meta.glob<MarkdownInstance<Frontmatter>>('./projects/*.md', { eager: true }));
 ---
 
 <Base page_title={page_title}>
@@ -17,11 +27,6 @@ const all_projects = Object.values(import.meta.glob('./projects/*.md', { eager: 
 		image={project.frontmatter.image}
 		desc={project.frontmatter.description}
 		cont={project.frontmatter.contribution}
-		tags={project.frontmatter.tags}
-		tags_team={project.frontmatter.tags_team}
-		tags_status={project.frontmatter.tags_status}
-		tags_tools={project.frontmatter.tags_tools}
-		tags_languages={project.frontmatter.tags_languages}
-		tags_skills={project.frontmatter.tags_skills} />)}
+		tags={project.frontmatter.tags} />)}
 	</Content>
 </Base>

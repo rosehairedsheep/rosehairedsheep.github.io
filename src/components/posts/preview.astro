@@ -1,7 +1,7 @@
 ---
 import '../../styles/posts.css'
 
-const { url, pub_date, desc, image, cont, tags, tags_team, tags_status, tags_tools, tags_languages, tags_skills } = Astro.props;
+const { url, pub_date, desc, image, cont, tags } = Astro.props;
 ---
 
 <div class="post-shape grid-post">
@@ -15,11 +15,11 @@ const { url, pub_date, desc, image, cont, tags, tags_team, tags_status, tags_too
 			{desc}
 		</div>
 		<div class="post-tags">
-			{tags_team.map((tag: string) => (<div class="post-tag post-tag-team">{tag}</div>))}
-			{tags_status.map((tag: string) => (<div class="post-tag post-tag-status">{tag}</div>))}
-			{tags_tools.map((tag: string) => (<div class="post-tag post-tag-tools">{tag}</div>))}
-			{tags_languages.map((tag: string) => (<div class="post-tag post-tag-languages">{tag}</div>))}
-			{tags_skills.map((tag: string) => (<div class="post-tag post-tag-skills">{tag}</div>))}
+			{tags.team && tags.team.map((tag: string) => (<div class="post-tag post-tag-team">{tag}</div>))}
+			{tags.status && tags.status.map((tag: string) => (<div class="post-tag post-tag-status">{tag}</div>))}
+			{tags.tools && tags.tools.map((tag: string) => (<div class="post-tag post-tag-tools">{tag}</div>))}
+			{tags.languages && tags.languages.map((tag: string) => (<div class="post-tag post-tag-languages">{tag}</div>))}
+			{tags.skills && tags.skills.map((tag: string) => (<div class="post-tag post-tag-skills">{tag}</div>))}
 		</div>
 	</div>
 </div>
