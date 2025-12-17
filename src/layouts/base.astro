@@ -15,7 +15,9 @@ const { page_title } = Astro.props
 		<title>{page_title} | sheep</title>
 	</head>
 	<body>
-		<Navspace />
-		<slot />
+		<div id="view-split" class="view-split">
+			<Navspace />
+			<slot />
+		</div>
 	</body>
 </html>

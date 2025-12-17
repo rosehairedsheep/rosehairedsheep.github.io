@@ -1,0 +1,89 @@
+.post-shape {
+	background-color: #140d11;
+	border-radius: 5px;
+	padding: 20px;
+	margin: 10px;
+}
+
+.grid-post {
+	height: auto;
+}
+
+.post-content {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.post-date {
+	text-align: right;
+	color: #817f7f;
+	font-style: italic;
+}
+
+.post-image {
+	width: auto;
+}
+
+.post-cont {
+	text-align: center;
+	color: #ffe3b7;
+	font-style: italic;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+.post-desc {
+	color: #faeee9;
+	font-family: "Verdana", sans-serif;
+	line-height: 150%;
+}
+
+.post-tags {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.post-tag {
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 8px;
+	padding: 3px 6px;
+	margin: 2px;
+
+	font-weight: bold;
+	font-size: 0.9em;
+}
+
+.post-tag-team {
+	background-color: #85bea3;
+	border-color: #5d9e90;
+}
+
+.post-tag-status {
+	background-color: #c7c086;
+	border-color: #9d9e5d;
+}
+
+.post-tag-tools {
+	background-color: #bea185;
+	border-color: #9e875d;
+}
+
+.post-tag-languages {
+	background-color: #be8591;
+	border-color: #9e5d73;
+}
+
+.post-tag-skills {
+	background-color: #8b85be;
+	border-color: #645d9e;
+}
+
+@media screen and (min-width: 636px)
+{
+	.grid-post {
+		width: 30%;
+	}
+}
