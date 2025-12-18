@@ -88,4 +88,8 @@
 		width: auto;
 		max-width: 29%;
 	}
+
+	.spacious {
+		padding: 30px 10%;
+	}
 }
