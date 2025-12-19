@@ -2,7 +2,7 @@
 layout: '../../layouts/project.astro'
 title: "Magebound"
 pub_date: 2024-12-18
-image: '/src/media/projects/proj-magebound/thumbnail.png'
+image: '/public/media/projects/proj-magebound/thumbnail.png'
 description: "An isometric spell-based beat 'em up."
 contribution: 'vfx, music'
 tags:

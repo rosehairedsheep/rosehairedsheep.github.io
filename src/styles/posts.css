@@ -13,6 +13,8 @@
 .post-content {
 	height: 100%;
 
+	text-decoration: none;
+
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
@@ -103,6 +105,22 @@
 	color: #faeee9;
 }
 
+.image {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+
+	width: 75vw;
+}
+
+.image-group {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+
+	gap: 20px;
+}
+
 @media screen and (min-width: 636px)
 {
 	.grid-post {
@@ -116,5 +134,20 @@
 
 	.tags-reverse {
 		flex-wrap: wrap-reverse;
+	}
+
+	.image {
+		display: inline-block;
+		margin-left: 0px;
+		margin-right: 0px;
+
+		width: auto;
+		max-width: 75vw;
+		max-height: 300px;
+	}
+
+	.image-group {
+		flex-direction: row;
+		flex-wrap: wrap;
 	}
 }

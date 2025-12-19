@@ -17,7 +17,7 @@ import Content from '../components/content.astro'
 import PostPreview from '../components/posts/preview.astro'
 
 const page_title = "projects"
-const all_projects = Object.values(import.meta.glob<MarkdownInstance<Frontmatter>>('./projects/*.md', { eager: true }));
+const all_projects = Object.values(import.meta.glob<MarkdownInstance<Frontmatter>>('./projects/*.{md,mdx}', { eager: true }));
 ---
 
 <Base page_title={page_title}>

@@ -8,6 +8,7 @@ const { url, name, pub_date, desc, image, cont, tags } = Astro.props;
 
 <div class="post-shape grid-post">
 	<div class="post-content">
+		<a href={url} class="post-content">
 		<div class="post-info">
 			<div class="post-title">
 				{name}
@@ -21,6 +22,7 @@ const { url, name, pub_date, desc, image, cont, tags } = Astro.props;
 		<div class="post-desc">
 			{desc}
 		</div>
+		</a>
 		<TagBar tags={tags} reverse="true" />
 	</div>
 </div>
