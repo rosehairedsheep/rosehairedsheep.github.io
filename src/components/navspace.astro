@@ -22,10 +22,10 @@ const { table_of_contents } = Astro.props
 			<h1 class="title">sheep</h1>
 		</div>
 		<div id="nav-buttons" class="nav-item nav-buttons">
-			<button class="nav-button" type="button" onclick="window.location.href = '/';">home</button>
-			<button class="nav-button" type="button" onclick="window.location.href = '/projects';">projects</button>
-			<button class="nav-button" type="button" onclick="window.location.href = '/arts';">arts</button>
-			<button class="nav-button" type="button" onclick="window.location.href = '/updates';">updates</button>
+			<a href="/" class="nav-button">home</a>
+			<a href="/projects" class="nav-button">projects</a>
+			<a href="/arts" class="nav-button">arts</a>
+			<a href="/updates" class="nav-button">updates</a>
 		</div>
 		<div id="social-buttons" class="nav-item social-buttons">
 			<IconCode class="social-button" onclick="window.open('https:\/\/github.com/rosehairedsheep','_blank');"/>

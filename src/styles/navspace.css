@@ -47,6 +47,29 @@
 
 .nav-button {
 	width: 100%;
+
+	color: #000000;
+	text-decoration: none;
+	text-align: center;
+
+	background-color: #a35b5e;
+	border: none;
+	border-radius: 5px;
+
+	font-size: 1em;
+	font-family: "Courier New", monospace;
+	font-weight: bold;
+	letter-spacing: 1px;
+
+	transition-duration: 0.2s;
+
+	padding: 3px 0px;
+}
+
+.nav-button:hover {
+	color: #000000;
+
+	background-color: #e2caa3;
 }
 
 .social-buttons {
