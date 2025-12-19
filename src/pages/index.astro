@@ -2,11 +2,14 @@
 import '../styles/_global.css'
 
 import Blog from '../layouts/blog.astro'
+import BlogPost from '../components/blogpost.astro'
 import {Content as About} from './about.md'
 
 const page_title = "home"
 ---
 
 <Blog page_title={page_title}>
-	<About />
+	<BlogPost>
+		<About />
+	</BlogPost>
 </Blog>

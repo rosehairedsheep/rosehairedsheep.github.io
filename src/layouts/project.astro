@@ -3,12 +3,13 @@ import '../styles/contents.css'
 import '../styles/posts.css'
 
 import Base from '../layouts/base.astro'
+
+const { page_title } = Astro.props
 ---
 
-<Base>
-	<meta charset="utf-8" />
+<Base page_title={page_title}>
 	<div class="content-space">
-		<div class="post-shape">
+		<div class="post-shape spacious">
 			<slot />
 		</div>
 	</div>

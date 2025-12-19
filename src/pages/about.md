@@ -23,7 +23,7 @@ I would, yeah. There's a lot of good space in the field left to explore.
 I am most familiar and comfortable with **Godot** (primarily 4 plus some experience with 3) using both GDScript and C#. I've also worked with **Unity** enough to know my way around it. Recently I have also been learning my way around **Butano**, although I doubt this is of professional interest to you (if it is, I'll pay to work for you, you're so cool).
 
 #### programming languages
-For most of my projects I use **C#**, but some of my Godot projects use **GDScript**. I also have decent experience with **Python** and **Java**, and I know plenty of **HTML**, **CSS** and some of **TypeScript**, the last three of which I used to make this website. If pressed, I could manage something with **C++** (currently learning this one!) or **R** (pretty rusty).
+For most of my projects I use **C#**, but some of my Godot games use **GDScript**. I also have decent experience with **Python** and **Java**, and I know plenty of **HTML**, **CSS**, and some of **TypeScript**, the last three of which I used to make this website. If pressed, I could manage something with **C++** (currently learning this one!) or **R** (pretty rusty).
 
 #### other tools
 All of my pixel art has been made and animated with **Aseprite**, and I used either **Procreate** or **Krita** for the rest of my digital pieces. Music was done mainly through **BeepBox** and **Bandlab**, but I'm not fully satisfied with either, so I am currently looking for an alternative for future projects. I used **Astro** to make this portfolio, and **Jekyll** for the previous one.
