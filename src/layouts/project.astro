@@ -3,13 +3,30 @@ import '../styles/contents.css'
 import '../styles/posts.css'
 
 import Base from '../layouts/base.astro'
+import TagBar from '../components/tagbar.astro'
 
-const { page_title } = Astro.props
+const { frontmatter, headings } = Astro.props
+const title = {
+	"slug": "",
+	"text": frontmatter.title,
+	"depth": 2
+}
+const full_headings = [title, ...headings]
 ---
 
-<Base page_title={page_title}>
+<Base page_title={frontmatter.title} table_of_contents={full_headings}>
 	<div class="content-space">
 		<div class="post-shape spacious">
+			<h2>
+				{frontmatter.title}
+			</h2>
+			<hr>
+			<TagBar tags={frontmatter.tags} reverse="false" />
+			{frontmatter.time &&
+				<div class="project-time">
+					🕓 {frontmatter.time} ({frontmatter.duration})
+				</div>
+			}
 			<slot />
 		</div>
 	</div>

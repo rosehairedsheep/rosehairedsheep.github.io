@@ -60,7 +60,7 @@
 .post-tags {
 	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap-reverse;
+	flex-wrap: wrap;
 }
 
 .post-tag {
@@ -99,6 +99,10 @@
 	border-color: #645d9e;
 }
 
+.project-time {
+	color: #faeee9;
+}
+
 @media screen and (min-width: 636px)
 {
 	.grid-post {
@@ -108,5 +112,9 @@
 
 	.spacious {
 		padding: 30px 10%;
+	}
+
+	.tags-reverse {
+		flex-wrap: wrap-reverse;
 	}
 }
