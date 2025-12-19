@@ -2,7 +2,7 @@
 layout: '../../layouts/project.astro'
 title: "Flight Of Fancy"
 pub_date: 2024-11-22
-image: '/public/media/projects/proj-nightjar/thumbnail.png'
+image: '/media/projects/proj-nightjar/thumbnail.png'
 description: "A flightformer about bird love."
 contribution: ''
 tags:

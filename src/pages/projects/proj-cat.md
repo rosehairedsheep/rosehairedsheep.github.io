@@ -2,7 +2,7 @@
 layout: '../../layouts/project.astro'
 title: "Cät"
 pub_date: 2024-10-16
-image: '/public/media/projects/proj-cat/thumbnail.png'
+image: '/media/projects/proj-cat/thumbnail.png'
 description: "A hack-and-slash about a sleepy cat."
 contribution: 'ui, animation, music'
 tags:

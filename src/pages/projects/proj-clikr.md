@@ -2,7 +2,7 @@
 layout: '../../layouts/project.astro'
 title: "Clikr"
 pub_date: 2025-06-10
-image: '/public/media/projects/proj-clikr/thumbnail.png'
+image: '/media/projects/proj-clikr/thumbnail.png'
 description: "A survival shooter in an electronic body horror world."
 contribution: 'ui, tech art, audio'
 tags:

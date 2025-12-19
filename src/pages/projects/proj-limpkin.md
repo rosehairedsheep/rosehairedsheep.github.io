@@ -2,7 +2,7 @@
 layout: '../../layouts/project.astro'
 title: "<Limpkin>"
 pub_date: 2023-11-07
-image: '/public/media/projects/proj-limpkin/thumbnail.png'
+image: '/media/projects/proj-limpkin/thumbnail.png'
 description: "A quick demo of a polyomino slotter."
 contribution: ''
 tags:

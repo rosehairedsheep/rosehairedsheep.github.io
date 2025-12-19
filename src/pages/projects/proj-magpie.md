@@ -2,7 +2,7 @@
 layout: '../../layouts/project.astro'
 title: "<Magpie>"
 pub_date: 2024-07-13
-image: '/public/media/projects/proj-magpie/thumbnail.png'
+image: '/media/projects/proj-magpie/thumbnail.png'
 description: "A deck-builder and recycler demo."
 contribution: 'ui, art, code'
 tags:

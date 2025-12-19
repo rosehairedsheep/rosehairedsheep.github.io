@@ -2,7 +2,7 @@
 layout: '../../layouts/project.astro'
 title: "Kosmik"
 pub_date: 2025-08-31
-image: '/public/media/projects/proj-kosmik/thumbnail.png'
+image: '/media/projects/proj-kosmik/thumbnail.png'
 description: "Dodging space junk like a pro."
 contribution: ''
 tags:
