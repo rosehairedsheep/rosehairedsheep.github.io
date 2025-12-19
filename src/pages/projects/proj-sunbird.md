@@ -1,6 +1,6 @@
 ---
 layout: '../../layouts/project.astro'
-title: 'Sunbird'
+title: "Nine Steps Down"
 pub_date: 2024-03-24
 image: '/src/media/projects/proj-sunbird/thumbnail.png'
 description: "An always-in-motion tower defence game."

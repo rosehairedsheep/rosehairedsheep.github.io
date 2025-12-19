@@ -54,6 +54,10 @@ li {
 	color: #faeee9;
 }
 
+li::marker {
+	color: #ffe3b7;
+}
+
 strong {
 	color: #ffe3b7;
 	font-family: "Courier New", monospace;

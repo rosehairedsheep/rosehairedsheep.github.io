@@ -3,10 +3,10 @@ import '../styles/contents.css'
 
 import Base from '../layouts/base.astro'
 
-const { page_title } = Astro.props
+const { page_title, table_of_contents = null } = Astro.props
 ---
 
-<Base page_title={page_title}>
+<Base page_title={page_title} table_of_contents={table_of_contents}>
 	<div class="content-space">
 		<slot />
 	</div>

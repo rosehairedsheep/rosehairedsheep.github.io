@@ -3,13 +3,15 @@ import '../styles/_global.css'
 
 import Blog from '../layouts/blog.astro'
 import BlogPost from '../components/blogpost.astro'
-import {Content as About} from './about.md'
+
+import * as About from './about.md'
+import {Content as AboutPost} from './about.md'
 
 const page_title = "home"
 ---
 
-<Blog page_title={page_title}>
+<Blog page_title={page_title} table_of_contents={About.getHeadings()}>
 	<BlogPost>
-		<About />
+		<AboutPost />
 	</BlogPost>
 </Blog>

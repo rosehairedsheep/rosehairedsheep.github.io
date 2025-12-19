@@ -4,9 +4,13 @@ import IconCode from '@lucide/astro/icons/code';
 import IconMail from '@lucide/astro/icons/mail';
 import IconGame from '@lucide/astro/icons/gamepad-2';
 
+import TableOfContents from './tableofcontents.astro'
+
 import '../styles/navspace.css'
 
 import profile_sheep from '../media/_main/profile_sheep.png'
+
+const { table_of_contents } = Astro.props
 ---
 
 <div id="nav-space" class="nav-space">
@@ -20,7 +24,7 @@ import profile_sheep from '../media/_main/profile_sheep.png'
 		<div id="nav-buttons" class="nav-item nav-buttons">
 			<button class="nav-button" type="button" onclick="window.location.href = '/';">home</button>
 			<button class="nav-button" type="button" onclick="window.location.href = '/projects';">projects</button>
-			<button class="nav-button" type="button" onclick="window.location.href = '/artistry';">artistry</button>
+			<button class="nav-button" type="button" onclick="window.location.href = '/arts';">arts</button>
 			<button class="nav-button" type="button" onclick="window.location.href = '/updates';">updates</button>
 		</div>
 		<div id="social-buttons" class="nav-item social-buttons">
@@ -29,4 +33,9 @@ import profile_sheep from '../media/_main/profile_sheep.png'
 			<IconGame class="social-button" onclick="window.open('https:\/\/rosehairedsheep.itch.io','_blank');"/>
 		</div>
 	</div>
+	{table_of_contents &&
+	<div id="table-of-contents" class="nav-square">
+		<TableOfContents contents={table_of_contents}>
+	</div>
+	}
 </div>

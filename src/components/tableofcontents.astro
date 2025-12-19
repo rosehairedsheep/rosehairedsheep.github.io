@@ -1,0 +1,54 @@
+---
+interface Heading {
+    slug: string;
+    text: string;
+    depth: number;
+}
+
+interface Props {
+	contents: Heading[];
+}
+
+const { contents } = Astro.props
+
+const nested_contents = build_hierarchy(contents)
+
+function build_hierarchy(headings: Heading[])
+{
+	const contents: any[] = [];
+	const parent_headings = new Map();
+		
+	if (!headings)
+		return contents;
+		
+	headings.forEach((h: Heading) => {
+		const heading = { ...h, subheadings: [] };
+		parent_headings.set(heading.depth, heading);
+		if (heading.depth === 2) {
+		contents.push(heading);
+		} else {
+		parent_headings.get(heading.depth - 1).subheadings.push(heading);
+		}
+	});
+	return contents;
+}
+---
+<ul>
+	{nested_contents.map(heading => (
+	<li>
+		<a href=`#${heading.slug}` class="toc-link toc-top">
+			{heading.text}
+		</a>
+		{heading.subheadings.length > 0 && (
+			<ul>
+				{heading.subheadings.map((subheading: any) => (
+					<li>
+						<a href=`#${subheading.slug}` class="toc-link toc-bot">
+							{subheading.text}
+						</a>
+					</li>
+				))}
+			</ul>
+		)}
+	</li>))}
+</ul>

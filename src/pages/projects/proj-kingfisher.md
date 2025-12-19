@@ -1,6 +1,6 @@
 ---
 layout: '../../layouts/project.astro'
-title: 'Kingfisher'
+title: "<Kingfisher>"
 pub_date: 2024-09-07
 image: '/src/media/projects/proj-kingfisher/thumbnail.png'
 description: "A HUD-based platformer."

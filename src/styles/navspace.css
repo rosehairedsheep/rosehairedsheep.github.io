@@ -1,4 +1,7 @@
 .nav-space {
+	display: flex;
+	flex-direction: column;
+
 	height: auto;
 	width: 100%;
 
@@ -62,6 +65,26 @@
 
 .social-button:hover {
 	color: #e88285;
+}
+
+.toc-link {
+	text-decoration: none;
+}
+
+.toc-link:hover {
+	color: #e88285;
+}
+
+.toc-top {
+	color: #ffe3b7;
+}
+
+.toc-bot {
+	color: #fbcca2;
+}
+
+ul {
+	padding-left: 20px;
 }
 
 @media screen and (min-width: 636px)

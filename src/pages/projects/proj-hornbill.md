@@ -1,6 +1,6 @@
 ---
 layout: '../../layouts/project.astro'
-title: 'Hornbill'
+title: "<Hornbill>"
 pub_date: 2023-08-13
 image: '/src/media/projects/proj-hornbill/thumbnail.png'
 description: "A simple character controller with an animation tree."

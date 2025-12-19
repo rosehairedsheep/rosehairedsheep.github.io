@@ -11,13 +11,28 @@
 }
 
 .post-content {
+	height: 100%;
+
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
 }
 
+.post-info {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.post-title {
+	flex-grow: 1;
+
+	color: #ffe3b7;
+	font-size: 1.1em;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
 .post-date {
-	text-align: right;
 	color: #817f7f;
 	font-style: italic;
 }
@@ -35,6 +50,8 @@
 }
 
 .post-desc {
+	flex-grow: 1;
+
 	color: #faeee9;
 	font-family: "Verdana", sans-serif;
 	line-height: 150%;
@@ -43,7 +60,7 @@
 .post-tags {
 	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
+	flex-wrap: wrap-reverse;
 }
 
 .post-tag {

@@ -4,6 +4,7 @@ import '../styles/_global.css'
 import type { MarkdownInstance } from 'astro';
 interface Frontmatter {
     url: string;
+	title: string;
 	pub_date: string;
 	image: [key: string, value: string];
     description: string;
@@ -23,6 +24,7 @@ const all_projects = Object.values(import.meta.glob<MarkdownInstance<Frontmatter
 	<Content>
 		{all_projects.sort((a, b) => Date.parse(b.frontmatter.pub_date) - Date.parse(a.frontmatter.pub_date)).map((project: any) => <PostPreview
 		url={project.url}
+		name={project.frontmatter.title}
 		pub_date={project.frontmatter.pub_date}
 		image={project.frontmatter.image}
 		desc={project.frontmatter.description}

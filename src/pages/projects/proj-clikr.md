@@ -1,6 +1,6 @@
 ---
 layout: '../../layouts/project.astro'
-title: 'Clikr'
+title: "Clikr"
 pub_date: 2025-06-10
 image: '/src/media/projects/proj-clikr/thumbnail.png'
 description: "A survival shooter in an electronic body horror world."
