@@ -16,19 +16,36 @@ duration: "~ 6 weeks"
 ---
 
 ### about
+A scrapped Alpha version of a rogue-like multiplayer card builder and recycler, where each card required the player to discard cards to play it, and each had a separate play and discard effect. Developed alongside a friend with a 50/50 work split. I took on the role of project and programming co-lead as well as art and UI lead.
 
+<iframe class="youtube-embed" src="https://www.youtube.com/embed/hV6XL9Y2eNk" frameborder="0" />
 
 ### code
+The game at its core uses only four main elements from which most elements are inherited: Card, Pile, Player, and Interface (UI element for displaying the content of piles as cards). This allowed for a relatively straightforward and predictable way for items to interact with each other while developing the features. Card effects are also queued as most of the time, multiple actions happen one after the other, most of which requiring player interaction.
 
+<img class="image" src="/media/projects/proj-magpie/card_play_code.png" />
 
 ### ui
+I made neat tween-based animations for fanning or hovering over the cards!
 
+<img class="image" src="/media/projects/proj-magpie/card_animation_code.png" />
 
 ### art & animation
+I created the concept art for the player character as well as all the sprites and frame-based animations. There was also some card design concepts I worked on before the project got scrapped, since the cards needed to be flippable.
 
+<div class="image-group">
+	<img class="image" src="/media/projects/proj-magpie/player_concept.png" />
+	<img class="image" src="/media/projects/proj-magpie/card_concept.png" />
+	<img class="image" src="/media/projects/proj-magpie/concept_lineup.png" />
+</div>
+
+Here's the most interesting animation that came out of the whole thing, I think:
+
+<img class="image" src="/media/projects/proj-magpie/cast_animation.gif" />
 
 ### retrospection
 #### what did i do right?
-
+Drawing concept art before diving head-first into asset creation was not only important, but also satisfying. It is something I look back on with fondness, and a feature I should implement into my workflow on a more regular basis.
 
 #### what would i do different?
+The project suffered from a two-sided creative pull, and that is what ultimately led it to fall apart at the seams. I am much more careful about establishing a full vision and lead at the beginning of a project, and working together under a common plan. I also think choosing Godot 3 coupled with C# (in order to achieve WebGL support) was too straining on development, as the two didn't feel quite as well integrated as was later 	achieved with Godot 4. I stick to that version nowadays, and if I need a web-playable version, I choose to use GDScript instead from the beginning.
