@@ -127,6 +127,11 @@
 	aspect-ratio: 16 / 9;
 }
 
+.itch-embed {
+	width: auto;
+	height: 175px;
+}
+
 @media screen and (min-width: 636px)
 {
 	.grid-post {
@@ -155,5 +160,9 @@
 	.image-group {
 		flex-direction: row;
 		flex-wrap: wrap;
+	}
+
+	.itch-embed {
+		width: 50%;
 	}
 }

@@ -1,0 +1,83 @@
+---
+layout: '../../layouts/project.astro'
+title: "📺 Clikr"
+pub_date: 2025-06-10
+image: '/media/projects/proj-clikr/thumbnail.png'
+description: "A survival shooter in an electronic body horror world."
+contribution: 'ui, tech art, audio'
+tags:
+  team: ["team"]
+  status: ["game"]
+  tools: ["unity"]
+  languages: ["c#"]
+  skills: ["audio", "code", "tech", "ui"]
+time: "may – jun 2025"
+duration: "~ 5 weeks"
+---
+
+### about
+A survival shooter in an electronic body horror world. Made as part of a game development course by a six-person team in five weeks. Playable in browser, or downloadable for Windows. I handled the user interface (including implementation) and audio.
+
+<div align="center">
+<iframe class="itch-embed" frameborder="0" src="https://itch.io/embed/3562848?border_width=5&amp;bg_color=000000&amp;fg_color=e3cb03&amp;link_color=fff403&amp;border_color=000000"><a href="https://samuel-salo.itch.io/clikr">CLIKR by Samuel Salo, rosehairedsheep, XRVIDENX, val, rs_sakuras, Deleeth</a></iframe>
+</div>
+
+### ui
+
+I took care of the UI side of the game, and I planned for it to be a core element of the world fantasy since the world was based on old tech. The UI was to be snappy and responsive, and full of draw and charisma.
+
+<div class="image-group">
+	<img class="image" src="/media/projects/proj-clikr/concept_hud.png" />
+	<img class="image" src="/media/projects/proj-clikr/concept_settings.png" />
+</div>
+
+Starting with the crosshair and interaction prompt, I wanted them to draw the player's attention, especially since it wasn't immediately apparent what the player could interact with in the world (such as shooting TVs with their hand). I added motion and colour when actions were available.
+
+<img class="image" src="/media/projects/proj-clikr/ui_crosshair.gif" />
+
+The inventory wanted to be visible at all times since it contained only two distinct kinds of items which were both pertinent to gameplay at all times. I made tween-based animations for receiving and using items because I needed to handle keyframes dynamically.
+
+<img class="image" src="/media/projects/proj-clikr/ui_inventory.gif" />
+
+Towards the end of the project, the diegetic battery indicator fell out of the domain of the artists, and I needed to add a HUD element for it. I went with a "retro" style (this hurts to type), making sure to draw the player's attention when they were out of power, and added a bit of flair to the recharge animation.
+
+<img class="image" src="/media/projects/proj-clikr/ui_battery.gif" />
+
+I styled the settings menu after a CRT TV with a teletext-like program displayed. I added some light bulbs blinking in random intervals for fun.
+
+<img class="image" src="/media/projects/proj-clikr/settings_menu.gif" />
+
+There's also the main menu. The background moves back and forth on several layers, and some of the elements activate on a timer.
+
+<img class="image" src="/media/projects/proj-clikr/main_menu.gif" />
+
+#### fonts
+I made a pixel font called **Recluse** for the game with both a regular and italics style, both with full ASCII support.
+
+<div class="image-group">
+	<img class="image" src="/media/projects/proj-clikr/recluse_regular.png" />
+	<img class="image" src="/media/projects/proj-clikr/recluse_italics.png" />
+</div>
+
+### code
+My contribution to the codebase was focused on implementing the UI and HUD. I think the most interesting contribution was having to make a custom settings slider for volume in order to fit with the aesthetic.
+
+### tech
+The idea was to make a CRT-like shader to apply to the HUD and UI elements of the game. Originally I was planning on applying a post-processing effect to an entire layer but after delving deeper into the details of the Unity render pipeline I wasn't able to find a way to pull that off for the UI layer, as it was added last and all effect applied thereafter would also influence the base game view. In the end, I made a shader and applied it to each element individually, and only had to introduce a few workaround variables (such as accounting for element rotation so that scanlines stayed horizontal to the camera) to get a satisfactory result.
+
+<img class="image" src="/media/projects/proj-clikr/shader_full.png" />
+
+Here's some better shots:
+
+<div class="image-group">
+	<img class="image" src="/media/projects/proj-clikr/shader_1.png" />
+	<img class="image" src="/media/projects/proj-clikr/shader_2.png" />
+	<img class="image" src="/media/projects/proj-clikr/shader_3.png" />
+</div>
+
+### retrospection
+#### what did i do right?
+I am quite happy with how the CRT shader worked out, I got it looking pretty much exactly the way I wanted. The HUD elements feel good to mess around with and I often spend some time just watching them do their thing. The settings menu turned out quite cute as well. I think my choice for the UI accent colour fit well to introduce visual interest and identity into the game.
+
+#### what would i do different?
+Music's a bit weak. It was delegated to the end of the work period, so I couldn't quite get it to the level of polish I wanted. Horror music is very specific, it is often quite subtle, but that means it's all the more important to get everything included in it to pull its weight 100%. I think the track works fine, but needed more time to explore more options and instruments, and additional planning of how exactly it should make the player feel.
