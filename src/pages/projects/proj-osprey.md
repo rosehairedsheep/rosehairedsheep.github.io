@@ -11,4 +11,6 @@ tags:
   tools: ["godot"]
   languages: ["c#"]
   skills: ["code", "ui"]
+time: "nov 2025..."
+duration: "ongoing"
 ---

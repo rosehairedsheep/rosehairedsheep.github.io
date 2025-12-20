@@ -11,4 +11,6 @@ tags:
   tools: ["astro"]
   languages: ["typescript", "html", "css"]
   skills: ["code", "ui"]
+time: "dec 2025..."
+duration: "ongoing"
 ---

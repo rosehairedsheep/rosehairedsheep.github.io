@@ -121,6 +121,12 @@
 	gap: 20px;
 }
 
+.youtube-embed {
+	width: 100%;
+
+	aspect-ratio: 16 / 9;
+}
+
 @media screen and (min-width: 636px)
 {
 	.grid-post {

@@ -11,4 +11,6 @@ tags:
   tools: ["godot"]
   languages: ["gdscript"]
   skills: ["art", "animation", "audio", "code", "ui"]
+time: "nov 2023 – mar 2024"
+duration: "~ 4 months"
 ---

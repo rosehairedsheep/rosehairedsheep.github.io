@@ -10,4 +10,6 @@ tags:
   status: ["game"]
   tools: ["unity"]
   skills: ["audio", "tech"]
+time: "nov – dec 2024"
+duration: "~ 5 weeks"
 ---

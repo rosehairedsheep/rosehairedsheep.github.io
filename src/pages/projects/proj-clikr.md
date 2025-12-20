@@ -11,4 +11,6 @@ tags:
   tools: ["unity"]
   languages: ["c#"]
   skills: ["audio", "code", "tech", "ui"]
+time: "may – jun 2025"
+duration: "~ 5 weeks"
 ---

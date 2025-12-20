@@ -11,4 +11,6 @@ tags:
   tools: ["butano"]
   languages: ["c++"]
   skills: ["audio", "code"]
+time: "dec 2025..."
+duration: "ongoing"
 ---

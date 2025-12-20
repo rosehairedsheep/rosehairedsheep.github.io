@@ -11,4 +11,6 @@ tags:
   tools: ["godot"]
   languages: ["c#"]
   skills: ["art", "animation", "audio", "code", "tech", "ui"]
+time: "sep – nov 2024"
+duration: "~ 10 weeks"
 ---

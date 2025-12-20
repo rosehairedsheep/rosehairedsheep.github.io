@@ -18,6 +18,8 @@ duration: "~ 4 days"
 ### about
 An attempt at a smooth character controller with quality-of-life features and own animation controller. Honestly, this thing's pretty old, and I have since reimplemented most features from here in one way or another in other projects, but I still think this demo is worth showing off, if not just for the sake of seeing the beginnings.
 
+<iframe class="youtube-embed" src="https://www.youtube.com/embed/b81EE21MIYU" frameborder="0" />
+
 ### code
 It's a basic character controller, but there's a few somewhat interesting features. The jump height is variable based on how long the button was held for, and I implemented a buffer jump system (if the jump button was pressed right before the character hit the ground, they would jump as soon as they did).
 
@@ -31,7 +33,11 @@ I used a single-layered animation controller with a mix of variable-based and ex
 
 <img class="image" src="/media/projects/proj-hornbill/hornbill_animation_controller.gif" />
 
-### what would i do different?
+### retrospection
+#### what did i do right?
+There's some interesting stuff in here such as applying different gravity values for jumping up and falling, and the animation controller is pretty complex with its transitions. It was a good foundation for later works.
+
+#### what would i do different?
 Discounting additional features (like coyote jump) and purely focusing on execution, there's a lot I have since learned to do better. By far the clearest is the necessity for multiple animation controller layers; in this case I would be inclined to go for two, one for sprite swaps and the other for squash and stretch. Especially in the case of the landing animation, there is obvious potential for conflict with just a single layer depending on if the player is moving or stays still.
 
 The other big sticklers are just the general smoothness of the animations (which mostly just needs more time spent on it), and the code. The latter works fine for what it is, but solving all the edge cases without a better structured codebase would be a nightmare if I expanded on this in any way.
