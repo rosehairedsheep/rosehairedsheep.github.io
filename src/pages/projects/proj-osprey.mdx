@@ -3,22 +3,45 @@ layout: '../../layouts/project.astro'
 title: "🐕 <Osprey>"
 pub_date: 2025-12-16
 image: '/media/projects/proj-osprey/thumbnail.png'
-description: "A data-driven metroidvania."
+description: "A data-driven GBA-inspired maildog metroidvania."
 contribution: ''
 tags:
   team: ["solo"]
   status: ["active"]
   tools: ["godot"]
-  languages: ["c#"]
+  languages: ["csharp"]
   skills: ["code", "ui"]
 time: "nov 2025..."
 duration: "ongoing"
 ---
 
 ### about
-
+A work-in-progress GBA-inspired data-driven project / game about a maildog. This is mostly an excuse for me to mess around with code and UI, so I am unsure if I'll be bringing this project to completion. I'm playing it by ear at the moment.
 
 ### code
+The core premise of the project is the data-driven and customisable nature. Any possible thing is loaded from JSON files straight into custom classes and passed along. For example, I can trigger any given dialogue with just the in-game console by passing along the name. The data contains file names of participating speakers and localised dialogue text among others.
 
+<img class="image" src="/media/projects/proj-osprey/dialogue_file.png" />
+
+Speaker data are stored in their own JSON files, and contain animation frame data as well as the type sound for their dialogue among others. The portraits are automatically loaded, split, and animated based on this data.
+
+<img class="image" src="/media/projects/proj-osprey/speaker_file.png" />
+
+Dialogue text can include a range of custom commands such as pausing, speeding up, waiting for player input, playing a sound effect, triggering an animation for either of the speakers, shaking the screen, and others. Implementing new commands is quick and easy.
+
+<img class="image" src="/media/projects/proj-osprey/dialogue_commands.png" />
+
+Sound effects are also loaded from their own JSON files which can contain multiple different streams from which a sound is played at random, as well as random pitch and volume data. All audio from dialogues is loaded beforehand to prevent unnecessary repeated JSON parsing of the same file within the same dialogue, and certain sound effects such as text advance are not freed upon finishing and instead kept instantiated and repeatedly triggered throughout the dialogue.
+
+<img class="image" src="/media/projects/proj-osprey/sound_file.png" />
+
+Here is what the finished dialogue looks like:
+
+<iframe class="youtube-embed" src="https://www.youtube.com/embed/IMgizauhGhs" frameborder="0" />
+
+There's a lot more planned. :)
 
 ### ui
+Since the project's styled after the GBA, I opted for a 8x8 pixel tile grid for the elements, and I am trying to fit all the UI into those dimensions. This included creating a custom 8x8 monospace pixel font (which you can see in the video above) as well as custom scrolling and positioning functions so that everything would always be aligned to the grid.
+
+I am also currently implementing custom dialogue effects such as jittering (also shown above) in order to add some charm and interest to the dialogue system.
