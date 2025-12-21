@@ -1,7 +1,33 @@
 ---
-import Base from '../layouts/base.astro'
+import type { MarkdownInstance } from 'astro';
+interface Frontmatter {
+	index: number;
+	title: string;
+	time: string;
+	tool: string;
+	dimensions: string;
+	palette: string;
+	animation: string;
+}
+
+import Blog from '../layouts/blog.astro'
+import BlogPostArt from '../components/blogpostart.astro'
 
 const page_title = "arts"
+const all_posts = Object.values(import.meta.glob<MarkdownInstance<Frontmatter>>('./arts/*.{md,mdx}', { eager: true }));
+const sorted_posts = all_posts.sort((a, b) => b.frontmatter.index - a.frontmatter.index);
 ---
 
-<Base page_title={page_title} />
+<Blog page_title={page_title}>
+	{sorted_posts.map((post: any) => (
+		<BlogPostArt
+		title={post.frontmatter.title}
+		time={post.frontmatter.time}
+		tool={post.frontmatter.tool}
+		dimensions={post.frontmatter.dimensions}
+		palette={post.frontmatter.palette}
+		animation={post.frontmatter.animation}>
+			<post.Content />
+		</BlogPostArt>
+	))}
+</Blog>

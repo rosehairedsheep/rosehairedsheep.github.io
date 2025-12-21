@@ -1,8 +1,22 @@
 ---
+import type { MarkdownInstance } from 'astro';
+interface Frontmatter {
+	title: string;
+	date: string;
+}
+
 import Blog from '../layouts/blog.astro'
-import BlogPost from '../components/blogpost.astro'
+import BlogPostUpdate from '../components/blogpostupdate.astro'
 
 const page_title = "updates"
+const all_posts = Object.values(import.meta.glob<MarkdownInstance<Frontmatter>>('./posts/*.{md,mdx}', { eager: true }));
+const sorted_posts = all_posts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
 ---
 
-<Blog page_title={page_title} />
+<Blog page_title={page_title}>
+	{sorted_posts.map((post: any) => (
+		<BlogPostUpdate title={post.frontmatter.title} date={post.frontmatter.date}>
+			<post.Content />
+		</BlogPostUpdate>
+	))}
+</Blog>

@@ -5,12 +5,13 @@ import IconMail from '@lucide/astro/icons/mail';
 import IconGame from '@lucide/astro/icons/gamepad-2';
 
 import TableOfContents from './tableofcontents.astro'
+import GitProject from './gitproject.astro'
 
 import '../styles/navspace.css'
 
 import profile_sheep from '../../public/media/_main/profile_sheep.png'
 
-const { table_of_contents } = Astro.props
+const { table_of_contents, git_project } = Astro.props
 ---
 
 <div id="nav-space" class="nav-space">
@@ -33,6 +34,11 @@ const { table_of_contents } = Astro.props
 			<IconGame class="social-button" onclick="window.open('https:\/\/rosehairedsheep.itch.io','_blank');"/>
 		</div>
 	</div>
+	{git_project &&
+	<div id="git-project" class="nav-square nav-center">
+		<GitProject link={git_project}>
+	</div>
+	}
 	{table_of_contents &&
 	<div id="table-of-contents" class="nav-square">
 		<TableOfContents contents={table_of_contents}>

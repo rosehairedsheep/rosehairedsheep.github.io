@@ -1,0 +1,18 @@
+---
+import BlogPost from "./blogpost.astro"
+
+const { title, time, tool, dimensions, palette, animation } = Astro.props
+---
+
+<BlogPost>
+	<h2>{title}</h2>
+	{time && <div class="post-date">{time}</div>}
+	<div class="art-data">
+		{tool && <div class="art-infopiece">📺 {tool}</div>}
+		{dimensions && <div class="art-infopiece">📏 {dimensions}</div>}
+		{palette && <div class="art-infopiece">🎨 {palette}</div>}
+		{animation && <div class="art-infopiece">🎥 {animation}</div>}
+	</div>
+	<hr>
+	<slot />
+</BlogPost>

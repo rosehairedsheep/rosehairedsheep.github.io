@@ -109,6 +109,12 @@
 	color: #fbcca2;
 }
 
+.nav-text {
+	color: #faeee9;
+
+	text-align: center;
+}
+
 ul {
 	padding-left: 20px;
 }

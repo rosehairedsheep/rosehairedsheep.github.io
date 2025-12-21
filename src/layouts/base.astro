@@ -3,7 +3,7 @@ import '../styles/_global.css'
 
 import Navspace from '../components/navspace.astro'
 
-const { page_title, table_of_contents } = Astro.props
+const { page_title, table_of_contents, git_project } = Astro.props
 ---
 
 <html lang="en">
@@ -16,7 +16,7 @@ const { page_title, table_of_contents } = Astro.props
 	</head>
 	<body>
 		<div id="view-split" class="view-split">
-			<Navspace table_of_contents={table_of_contents} />
+			<Navspace table_of_contents={table_of_contents} git_project={git_project} />
 			<slot />
 		</div>
 	</body>

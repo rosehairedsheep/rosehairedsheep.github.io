@@ -2,23 +2,29 @@
 layout: '../../layouts/project.astro'
 title: "📒 Portfolio"
 pub_date: 2025-12-17
+git_project: "https://github.com/rosehairedsheep/Portfolio"
 image: '/media/projects/proj-portfolio/thumbnail.png'
 description: "This thing! What's inception?"
 contribution: ''
 tags:
   team: ["solo"]
-  status: ["active"]
+  status: ["website"]
   tools: ["astro"]
   languages: ["typescript", "html", "css"]
   skills: ["code", "ui"]
-time: "dec 2025..."
-duration: "ongoing"
+time: "dec 2025"
+duration: "5 days"
 ---
 
 ### about
-
+This thing that you're reading! A collection of my projects, arts, and blog posts.
 
 ### code
+I used Astro to build the site and wrote the whole website from scratch without a template. There's a decent amount of TypeScript scattered in places, such as creating dynamic tag pages:
 
+<img class="image" src="/media/projects/proj-portfolio/type_tags.png" />
+
+The project, art, and blog pages are written with MDX, an expanded version of Markdown, which lets me insert custom elements into the page. I also have code for automatically pulling information out of the metadata of a Markdown page and creating sections based on those, such as the GitHub and table-of-contents elements either to your left or above, depending on which device you're using.
 
 ### ui
+There's a bunch of CSS all around, of course. Also, I tried my best to make the website user-friendly to browse: the table-of-contents sections (not present in the arts and updates sections – yet!), tags being present in multiple places and always clickable, all that kind of fun stuff.

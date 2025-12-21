@@ -114,6 +114,15 @@
 	color: #faeee9;
 }
 
+.art-data {
+	display: flex;
+	flex-direction: column;
+}
+
+.art-infopiece {
+	color: #c5b9b9;
+}
+
 .image {
 	display: block;
 	margin-left: auto;
@@ -154,6 +163,12 @@
 
 	.tags-reverse {
 		flex-wrap: wrap-reverse;
+	}
+
+	.art-data {
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 20px;
 	}
 
 	.image {
