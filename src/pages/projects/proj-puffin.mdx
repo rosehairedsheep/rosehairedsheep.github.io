@@ -16,27 +16,56 @@ duration: "~ 2 days"
 ---
 
 ### about
+A Finnish Game Jam 2025 submission about flying through space and moving parts of your ship to neutralise meteorites. Playable in browser. Inspired by the Czech board game **Galaxy Trucker**.
+
 <div align="center">
 <iframe class="itch-embed" frameborder="0" src="https://itch.io/embed/3849690?border_width=5&amp;bg_color=00000a&amp;fg_color=ffffff&amp;link_color=ffc933&amp;border_color=00000a"><a href="https://cheatcodetojoy.itch.io/kosmik">Kosmik by Cheatcode to Joy</a></iframe>
 </div>
 
 ### code
+I am using AStar pathfinding to make sure all parts of the ship are connected during initialisation (since I am randomising the connections), as well as checking whenever a piece has moved. There is also some advanced checking with regards to the exposed nodes: each tile when removed or added makes the first tile in each direction disable its expose warning, even if they are not directly adjacent.
 
+There's also some fun stuff with randomly colourshifting the individual cargo boxes to create a less monotonous view.
+
+<img class="image" src="/media/projects/proj-puffin/screen1.png" />
 
 ### ui
+I created a pretty main menu with an animation for the settings popping up. Since I was controlling the exhaust hue via shaders, I had to create my own custom slider fill nodes, as the native Godot ones did not have support for user-assigned materials. I also created a second custom slider background for the hue selector, to which I applied a different shader.
 
+<img class="image" src="/media/projects/proj-puffin/main_menu.gif" />
 
 ### tech
+The background has two variants, and both have been created using particles. Both are preloaded at the start to fill out the screen in time, and the player can switch between them at will.
 
+<img class="image" src="/media/projects/proj-puffin/background_particles.gif" />
+
+I also created particles for the engine trail.
+
+<img class="image" src="/media/projects/proj-puffin/burner_particles.gif" />
+
+And a few shaders on top. In order, a shader that coloured elements roughly based on the input colour (within an intentional interval), a shader that turned the object transparent bottom-to-top based on the control value (used for the exclamation points), and a quick shader to display the hue spectrum (used as background for the hue selection slider).
+
+<div class="image-group">
+	<img class="image" src="/media/projects/proj-puffin/shader_colour.png" />
+	<img class="image" src="/media/projects/proj-puffin/shader_fill.png" />
+	<img class="image" src="/media/projects/proj-puffin/shader_hue.png" />
+</div>
 
 ### art
+The art is pretty minimal, but does exist. I'll showcase just some of it to not clutter this space too much.
 
+<div class="image-group">
+	<img class="image" src="/media/projects/proj-puffin/ship_parts.png" />
+	<img class="image" src="/media/projects/proj-puffin/game_icon.png" />
+	<img class="image" src="/media/projects/proj-puffin/some_ui.png" />
+</div>
 
 ### audio
-
+I made a short little looping track called **Bouncing Around** for the game, as well as a few synthetic sound effects and fanfares.
 
 ### retrospection
 #### what did i do right?
-
+The game feels like a complete package with audio, settings, and a full gameplay experience. I am happy with managing to create a full project in such a short amount of time without having to completely drop some important parts of it.
 
 #### what would i do different?
+I wish I had spent some more time on the music. It works, but could have been better.
