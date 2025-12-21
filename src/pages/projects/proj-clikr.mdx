@@ -62,7 +62,7 @@ I made a pixel font called **Recluse** for the game with both a regular and ital
 My contribution to the codebase was focused on implementing the UI and HUD. I think the most interesting contribution was having to make a custom settings slider for volume in order to fit with the aesthetic.
 
 ### tech
-The idea was to make a CRT-like shader to apply to the HUD and UI elements of the game. Originally I was planning on applying a post-processing effect to an entire layer but after delving deeper into the details of the Unity render pipeline I wasn't able to find a way to pull that off for the UI layer, as it was added last and all effect applied thereafter would also influence the base game view. In the end, I made a shader and applied it to each element individually, and only had to introduce a few workaround variables (such as accounting for element rotation so that scanlines stayed horizontal to the camera) to get a satisfactory result.
+The idea was to make a CRT-like shader to apply to the HUD and UI elements of the game. Originally I was planning on applying a post-processing effect to an entire layer but after delving deeper into the details of the Unity render pipeline I wasn't able to find a way to pull that off for the UI layer, as it was added last and all effects applied thereafter would also influence the base game view. In the end, I made a shader and applied it to each element individually, and only had to introduce a few workaround variables (such as accounting for element rotation so that scanlines stayed horizontal to the camera) to get a satisfactory result.
 
 <img class="image" src="/media/projects/proj-clikr/shader_full.png" />
 
