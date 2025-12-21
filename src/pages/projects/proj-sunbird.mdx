@@ -16,24 +16,58 @@ duration: "~ 4 months"
 ---
 
 ### about
+A tower defence game (with a twist!) available for download on itch.io. <a href="https://suomigamehub.com/uutiset/aktiivinen-strategiointi-ja-tornien-siirtely-keskiossa-uudessa-nine-steps-down-pelissa/">It has also been covered by SuomiGameHUB.</a>
+
 <div align="center">
 <iframe class="itch-embed" frameborder="0" src="https://itch.io/embed/2607995?border_width=5&amp;bg_color=000000&amp;fg_color=ffe3b7&amp;link_color=e88285&amp;border_color=000000"><a href="https://cheatcodetojoy.itch.io/ninestepsdown">Nine Steps Down by CheatcodeToJoy</a></iframe>
 </div>
 
 ### code
+The game randomly generates a board and uses AStar pathfinding to decide the route the enemies should take. Additionally, the players can place arrows as forced chokepoints to divert the route.
 
+<img class="image" src="/media/projects/proj-sunbird/arrows.gif" />
+
+The player character can pick up any tower even during gameplay and move it to a new spot.
+
+<img class="image" src="/media/projects/proj-sunbird/gameplay.gif" />
+
+There is also a speed-up option in the game. And run history!
+
+<img class="image" src="/media/projects/proj-sunbird/speed.gif" />
 
 ### ui
+One of the cool UI bits I got to do was an upgrade menu that popped up after each level. Every tower had its own icon, name, status icons, description, and flavour text. Pretty neat!
 
+<img class="image" src="/media/projects/proj-sunbird/upgrade_menu.png" />
+
+Here's the two types of build menus the player had access to: one on the right sidebar, and one directly on the field. Each one had its own quality-of-life additions; the former had an option to right-click a tower to pin the view, and the latter took into account the right-most and bottom-most tiles and spawned to the left and top respectively if summoned too close to the edge.
+
+<div class="image-group">
+	<img class="image" src="/media/projects/proj-sunbird/build_menu.gif" />
+	<img class="image" src="/media/projects/proj-sunbird/craft_menu.gif" />
+</div>
+
+I also made a custom hand-drawn font called **Polárka** for the game and coded some speech bubbles. Radical!
+
+<img class="image" src="/media/projects/proj-sunbird/speech_bubbles.gif" />
 
 ### art & animation
+There is so much, so I'll just pick out my favourites. Here's the tower icons:
 
+<img class="image" src="/media/projects/proj-sunbird/icons_towers.png" />
+
+I'm also very proud of the different tower visuals and little idle animations. They even have their own personalised sprite sections which show how charged their next shot is!
+
+<img class="image" src="/media/projects/proj-sunbird/towers.gif" />
 
 ### audio
-
+I made two variations of a single track for the game, and I won't sugarcoat it, it's not good, I'm not happy with it. It was my first finished music track ever though, so I don't fault myself too much for that.
 
 ### retrospection
 #### what did i do right?
-
+Looking back, I am actually quite impressed by just how polished the visuals and UI are. The game looks charming, and I can't help but still love it. The tower icons, description windows, build menus, status icons, they all look great.
 
 #### what would i do different?
+The game needed a lot of testing and balancing done, and I didn't pay it nearly as much attention as I should have. It has severely hurt what otherwise actually worked pretty decently.
+
+I also definitely wasn't yet terribly skilled in Godot, and it shows. A big example is me saving the player's save data to a JSON file in the game's source code. This shouldn't work. I have no idea why it works.
