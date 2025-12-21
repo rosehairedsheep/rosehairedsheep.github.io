@@ -78,6 +78,13 @@
 	font-size: 0.9em;
 }
 
+.post-tag:hover {
+	color: #000000;
+
+	background-color: #faeee9;
+	border-color: #ffe3b7;
+}
+
 .post-tag-team {
 	background-color: #85bea3;
 	border-color: #5d9e90;
