@@ -16,27 +16,54 @@ duration: "~ 10 weeks"
 ---
 
 ### about
+A 2D level-based flightformer about bird love available for download on itch.io. The game is styled in mostly black with an accent colour that changes based on how far in the game the player is at. There is an in-built speedrun timer, and the speedrun.com page is <a href="https://www.speedrun.com/Flight_Of_Fancy">available here!</a>
+
 <div align="center">
 <iframe class="itch-embed" frameborder="0" src="https://itch.io/embed/2977583?linkback=true&amp;border_width=5&amp;bg_color=000000&amp;fg_color=ffeec0&amp;link_color=fa5c5c&amp;border_color=000000"><a href="https://cheatcodetojoy.itch.io/flight-of-fancy">Flight Of Fancy by Cheatcode to Joy</a></iframe>
 </div>
 
-### code
+<iframe class="youtube-embed" src="https://www.youtube.com/embed/KnCk4YpMrY0" frameborder="0" />
 
+### code
+Everything in the game is level-based, including the main menu (the player can even win it to start the first level!). A lot of the game's elements work off of or are automatically populated based on the levels, like the level picker menu:
+
+<img class="image" src="/media/projects/proj-nightjar/level_picker.png" />
+
+There is also an incorporated speedrun timer that cuts out loading times and displays per-level times.
 
 ### ui
+The game's colour scheme is entirely based on black + a primary colour + a secondary colour, the latter two of which seamlessly shift between preset values based on the current level. In order to shade every piece of UI, I had to create several custom elements because Godot was not exposing all the values that I required.
 
+Aside from the level picker displayed above, the other interesting UI elements I created were the settings menu, and the automatically populated controls hints in-game. And yes, I did make my own custom font for the game!
+
+<div class="image-group">
+	<img class="image" src="/media/projects/proj-nightjar/settings_menu.png" />
+	<img class="image" src="/media/projects/proj-nightjar/controls_hint.png" />
+</div>
 
 ### tech
+I made a shader for changing the primary and secondary accent colours and assigned them each their own material. The exposed values are then manipulated through code. I also created a shader script for manipulating the vignette used to transition between levels.
 
+<div class="image-group">
+	<img class="image" src="/media/projects/proj-nightjar/shader_script.png" />
+	<img class="image" src="/media/projects/proj-nightjar/shader_script.png" />
+</div>
 
 ### art & animation
 
 
 ### audio
+The game's main track, called **Skyline**, is themed to sound like a bird's love call (with an additional section to represent the environmental sounds), but the further the player gets in the game, the louder a secondary melody plays, this one representing the date's response, ultimately creating a love duophony (this version is called **Loveline**).
 
+**<a href="https://is.gd/FfuzC6">Skyline</a>:**
+<img class="image" src="/media/projects/proj-nightjar/song_skyline.png" />
+
+**<a href="https://is.gd/ZCDK9t">Loveline</a>:**
+<img class="image" src="/media/projects/proj-nightjar/song_loveline.png" />
 
 ### retrospection
 #### what did i do right?
-
+Loveline is probably my favourite musical piece that I've created, even though it has stiff competition. It creates a beautiful atmosphere with a nice bit of storytelling, and I am so proud of it. Also, the game looks beautiful and even attracted a small speedrunning audience, and that's a massive win for me.
 
 #### what would i do different?
+I absolutely should have spent some time on making a level editor. I composed all scenes by hand, and not only was it quite tedious, it also made it difficult to include quite as much detail as I wanted.
