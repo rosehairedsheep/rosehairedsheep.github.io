@@ -1,0 +1,55 @@
+---
+import type { MarkdownInstance } from 'astro';
+interface Frontmatter {
+    url: string;
+	title: string;
+	pub_date: string;
+	image: [key: string, value: string];
+    description: string;
+	contribution: string;
+	tags: [key: string, value: string[]]
+}
+
+import Base from '../../layouts/base.astro';
+import Content from '../../components/content.astro'
+import PostPreview from '../../components/posts/preview.astro'
+
+export async function getStaticPaths() {
+	const all_posts = Object.values(import.meta.glob<MarkdownInstance<Frontmatter>>('../projects/*.mdx', { eager: true }));
+	
+	const unique_tags = new Set();
+
+	all_posts.forEach((p: MarkdownInstance<Frontmatter>) => {
+		const tags = Object.values(p.frontmatter.tags).flat();
+		tags.forEach((t: string) => {
+			unique_tags.add(t);
+		});
+	});
+
+	const tags = [...unique_tags];
+
+	return tags.map((tag) => {
+		const filtered_posts = all_posts.filter((post: any) => Object.values(post.frontmatter.tags).flat().includes(tag));
+		return {
+			params: { tag },
+			props: { posts: filtered_posts }
+    	};
+  	});
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+---
+
+<Base pageTitle={tag}>
+  <Content>
+		{posts.sort((a, b) => Date.parse(b.frontmatter.pub_date) - Date.parse(a.frontmatter.pub_date)).map((project: any) => <PostPreview
+		url={project.url}
+		name={project.frontmatter.title}
+		pub_date={project.frontmatter.pub_date}
+		image={project.frontmatter.image}
+		desc={project.frontmatter.description}
+		cont={project.frontmatter.contribution}
+		tags={project.frontmatter.tags} />)}
+	</Content>
+</Base>

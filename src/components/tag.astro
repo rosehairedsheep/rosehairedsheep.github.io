@@ -1,0 +1,7 @@
+---
+import '../styles/posts.css'
+
+const { type, tag } = Astro.props
+---
+
+<a class=`post-tag post-tag-${type}` href=`/tags/${tag}`>{tag}</a>

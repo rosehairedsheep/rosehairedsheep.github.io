@@ -1,13 +1,15 @@
 ---
 import '../styles/posts.css'
 
+import Tag from "./tag.astro"
+
 const { tags, reverse } = Astro.props
 ---
 
 <div class={reverse == "true" ? "post-tags tags-reverse" : "post-tags"}>
-	{tags.team && tags.team.map((tag: string) => (<div class="post-tag post-tag-team">{tag}</div>))}
-	{tags.status && tags.status.map((tag: string) => (<div class="post-tag post-tag-status">{tag}</div>))}
-	{tags.tools && tags.tools.map((tag: string) => (<div class="post-tag post-tag-tools">{tag}</div>))}
-	{tags.languages && tags.languages.map((tag: string) => (<div class="post-tag post-tag-languages">{tag}</div>))}
-	{tags.skills && tags.skills.map((tag: string) => (<div class="post-tag post-tag-skills">{tag}</div>))}
+	{tags.team && tags.team.map((tag: string) => (<Tag type="team" tag={tag} />))}
+	{tags.status && tags.status.map((tag: string) => (<Tag type="status" tag={tag} />))}
+	{tags.tools && tags.tools.map((tag: string) => (<Tag type="tools" tag={tag} />))}
+	{tags.languages && tags.languages.map((tag: string) => (<Tag type="languages" tag={tag} />))}
+	{tags.skills && tags.skills.map((tag: string) => (<Tag type="skills" tag={tag} />))}
 </div>
