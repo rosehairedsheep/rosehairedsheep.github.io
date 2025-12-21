@@ -18,6 +18,10 @@ duration: "~ 4 weeks"
 ### about
 A turn-based fantasy battler where you play as the boss and your goal is to lose spectacularly to the adventuring party. Concept by me. Made as part of a game development course by a six-person team in four weeks. The game features a central excitement metre whose value changes based on how the player affects the fight (for example, damaging the players but not killing them, or using a variety of abilities increases excitement, while spamming an attack and killing a party member does the opposite). Victory is achieved if the enemies are sufficiently excited at the point of your death.
 
+<div align="center">
+<iframe class="itch-embed" frameborder="0" src="https://itch.io/embed/3427037?border_width=5&amp;bg_color=000000&amp;fg_color=ffac02&amp;link_color=798400&amp;border_color=000000"><a href="https://rosehairedsheep.itch.io/brosfight">Brosfight by rosehairedsheep, rs_sakuras, Hipitsu, abysska, HunterElu</a></iframe>
+</div>
+
 ### ui
 I handled all of the UI placement, implementation, and a lot of its visuals. Starting off with the excitement metre (the core element of the game), there is a main bar showing progress with a frame animated to the beat of the music. The animation gets more pronounced the higher the excitement is, and aligns to the different music layers playing. Below it is a log, which helps the players understand why certain actions had an effect on the metre. I made it collapsible in order to hold more of this vital information while also not being in the way if it wasn't needed. The bar also previews hoe much it will shift when hovering an action, to once again give the player more clarity on what is happening in the game. I felt this was especially vital with how obscure the main mechanic of the game was. To the right is an icon (drawn by the artists) representing whether or not the bar has been filled enough to win the game.
 
@@ -32,7 +36,7 @@ The third important element was the skill bar. The original plan was to fit it h
 <img class="image" src="/media/projects/proj-brosfight/skill_bar.gif" />
 
 ### audio
-I made an adaptive battle theme based on the excitement level, with more instruments joining in the better the player was doing. It's structured like a dialogue between the boss and the heroes, and underlines the playful nature of the fight. <a href="https://www.youtube.com/playlist?list=PL3MtBv8hOyqRLDKV4wV2hMmBJVTVmmOx9">Find it here on YouTube with lyrics!</a>
+I made an adaptive battle theme based on the excitement level called **When the Bros Fight**, with more instruments joining in the better the player was doing. It's structured like a dialogue between the boss and the heroes, and underlines the playful nature of the fight. <a href="https://www.youtube.com/playlist?list=PL3MtBv8hOyqRLDKV4wV2hMmBJVTVmmOx9">Find it here on YouTube with lyrics!</a>
 
 <img class="image" src="/media/projects/proj-brosfight/when_the_bros_fight.png" />
 
@@ -45,3 +49,5 @@ I think the music came out amazing, it's one of my favourite tracks to sing and 
 
 #### what would i do different?
 The scope was quite ambitious for how much time we had to work on the project, so I ended up taking a considerable amount of work home in the end. I am not sure if there was a feature I needed to cut or just be satisfied with more shortcomings, but in the end it has taught me to better understand project scopes.
+
+I have also gotten more familiar with UI scaling in Unity since this project, and realised I should have handled it better here.

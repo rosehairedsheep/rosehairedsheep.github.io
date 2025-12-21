@@ -9,25 +9,40 @@ tags:
   team: ["team"]
   status: ["game"]
   tools: ["unity"]
-  skills: ["animation", "audio", "ui"]
+  skills: ["animation", "art", "audio", "ui"]
 time: "sep – oct 2024"
 duration: "~ 4 weeks"
 ---
 
 ### about
+A 3D hack-and-slash demo with 2D art assets. Made as part of a game development course by a six-person team in four weeks. I handled the HUD as well as music and some animations.
 
+<div align="center">
+<iframe class="itch-embed" frameborder="0" src="https://itch.io/embed/3040101?linkback=true&amp;border_width=5&amp;bg_color=000000&amp;fg_color=eaeaea&amp;link_color=aa0000&amp;border_color=000000"><a href="https://xrvidenx.itch.io/catgame">Cät by XRVIDENX, Emma Ronkainen, HunterElu, rosehairedsheep, rs_sakuras, villle</a></iframe>
+</div>
 
-### ui
+### art & ui
+The first thing I did was handle the player's health bar and ability gauge (the adrenaline metre). I figured it would be nice to shape the individual health points to look like cat paws, and to combine the metre with a cat portrait we were planning for the HUD. For the latter, I handled the filling in-code while using animation controller switches to change between different looks for the frame of the gauge. I felt it was important to keep the outlook mostly still when little adrenaline was gathered, while adding progressively larger and bolder amounts of animation the closer the gauge got to full.
 
+<img class="image" src="/media/projects/proj-cat/adrenaline_gauge.gif" />
+
+For the other important element (the ability display), I drew black and white icons for both. They fade when the player does not have enough resource to use them, and bob up when they do. On use, they play a little animation as well.
+
+<img class="image" src="/media/projects/proj-cat/ability_icons.gif" />
 
 ### animation
+I used keyframe animation and a layered animation controller to handle the player's and the enemies' movement and attacks (and skill usage). This took into account facing direction, combo attacks, and a persistent bobbing effect.
 
+<img class="image" src="/media/projects/proj-cat/attack_animation.gif" />
 
 ### audio
+I composed a short looping track named **Dream With Knives**. The original plan was to have an ambient theme in addition to the battle theme, but time constraints have disallowed that. <a href="https://is.gd/gQmKbC">You can listen to it here!</a>
 
+<img class="image" src="/media/projects/proj-cat/song_dream_with_knives.png" />
 
 ### retrospection
 #### what did i do right?
-
+The UI elements came out great in my opinion, especially the adrenaline metre. I am proud of how the animation levels correspond to the amount of attention that should be paid to it.
 
 #### what would i do different?
+I was only getting started with Unity's UI systems so I definitely handled some things (like scaling) problematically. Also, the player and enemy animations are somewhat odd-feeling, and would have required a significant amount of more polish to look right. Maybe it would have been worth it to explore a different method for animating the sprites as well, like bones and character rigging.
