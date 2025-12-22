@@ -1,5 +1,4 @@
 ---
-import { Image } from 'astro:assets';
 import IconCode from '@lucide/astro/icons/code';
 import IconMail from '@lucide/astro/icons/mail';
 import IconGame from '@lucide/astro/icons/gamepad-2';
@@ -9,14 +8,12 @@ import GitProject from './gitproject.astro'
 
 import '../styles/navspace.css'
 
-import profile_sheep from '../../public/media/_main/profile_sheep.png'
-
 const { table_of_contents, git_project } = Astro.props
 ---
 
 <div id="nav-space" class="nav-space">
 	<div id="nav-square" class="nav-square nav-center">
-		<Image class="nav-item nav-picture" src={profile_sheep} alt="a cute little sheep." />
+		<img class="nav-item nav-picture" src=/media/_main/profile_sheep.png />
 		<div class="nav-item">
 			<h1 class="title">rose</h1>
 			<h1 class="title">haired</h1>
