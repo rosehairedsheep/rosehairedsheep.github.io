@@ -29,6 +29,8 @@
 }
 
 .nav-picture {
+	display: block;
+	
 	width: 30%;
 	height: auto;
 }
