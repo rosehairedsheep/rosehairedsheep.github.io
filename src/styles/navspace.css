@@ -28,10 +28,17 @@
 	padding: 8px 20px;
 }
 
+.nav-image-holder {
+	width: 100%;
+}
+
 .nav-picture {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+
 	width: 30%;
-	height: 30%;
-	max-height: 30%;
+	height: auto;
 }
 
 .title {
