@@ -29,10 +29,9 @@
 }
 
 .nav-picture {
-	display: block;
-	
 	width: 30%;
 	height: 30%;
+	max-height: 30%;
 }
 
 .title {
