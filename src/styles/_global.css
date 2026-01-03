@@ -52,6 +52,11 @@ a:hover {
 	color: #ffe3b7;
 }
 
+.plain {
+	color: inherit;
+	text-decoration: inherit;
+}
+
 li {
 	color: #faeee9;
 }
@@ -96,7 +101,7 @@ hr {
 	flex-direction: column;
 }
 
-@media screen and (min-width: 636px)
+@media screen and (min-width: 800px)
 {
 	.view-split {
 		flex-direction: row;

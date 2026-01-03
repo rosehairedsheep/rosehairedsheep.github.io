@@ -5,11 +5,6 @@
 	margin: 10px;
 }
 
-.grid-post {
-	width: 80vw;
-	height: auto;
-}
-
 .post-content {
 	height: 100%;
 
@@ -22,7 +17,7 @@
 
 .post-info {
 	display: flex;
-	flex-wrap: wrap;
+	flex-direction: column;
 }
 
 .post-title {
@@ -40,7 +35,8 @@
 }
 
 .post-image {
-	width: auto;
+	height: auto;
+	width: 100%;
 }
 
 .post-cont {
@@ -150,11 +146,11 @@
 	height: 175px;
 }
 
-@media screen and (min-width: 636px)
+@media screen and (min-width: 800px)
 {
-	.grid-post {
-		width: auto;
-		max-width: 29%;
+	.post-info {
+		flex-direction: row;
+		flex-wrap: wrap;
 	}
 
 	.spacious {

@@ -2,7 +2,7 @@
 layout: '../../layouts/project.astro'
 title: "🌾 A Hard Dairy's Work"
 pub_date: 2025-04-06
-image: '/media/projects/proj-robin/thumbnail.png'
+image: '/media/projects/robin/thumbnail.png'
 description: "A 3D turn-based puzzle game."
 contribution: ''
 tags:
@@ -21,19 +21,19 @@ A currently shelved game project inspired by those flash games where you need to
 ### code
 The game is set in a 3D environment, so that required me to create custom code to rotate the camera and zoom the view in and out.
 
-<img class="image" src="/media/projects/proj-robin/camera_manipulation.gif" />
+<img class="image" src="/media/projects/robin/camera_manipulation.gif" />
 
 Tiles and entities are loaded dynamically from JSON files and placed into the level with a spiral falling transition. A reverse transition happens when the level is completed or recalled.
 
-<img class="image" src="/media/projects/proj-robin/level_loading.gif" />
+<img class="image" src="/media/projects/robin/level_loading.gif" />
 
 I have also implemented moving linked groups of animals away from the player when there is free space, and moving the tractor towards the winning space when it's free to do so, which completes the level.
 
-<img class="image" src="/media/projects/proj-robin/move_win.gif" />
+<img class="image" src="/media/projects/robin/move_win.gif" />
 
 Aside from the gameplay, I have also implemented dynamic settings modules. I pre-created several modules based on the type of input (checkbox, slider, dropdown...), and only needed to drag a given module into the settings and give it a name that was equal to a config setting in the files (additionally allowed values if I needed it). The system then automatically gave it a name and default value, and connected it via signals to change the linked config value when the player interacted with it.
 
-<img class="image" src="/media/projects/proj-robin/settings.png" />
+<img class="image" src="/media/projects/robin/settings.png" />
 
 ### retrospection
 #### what did i do right?

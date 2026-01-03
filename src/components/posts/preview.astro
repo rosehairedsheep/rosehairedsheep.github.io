@@ -1,28 +1,27 @@
 ---
 import '../../styles/posts.css'
+import '../../styles/contents.css'
 
 import TagBar from '../tagbar.astro'
 
-const { url, name, pub_date, desc, image, cont, tags } = Astro.props;
+const { url, frontmatter } = Astro.props;
 ---
 
-<div class="post-shape grid-post">
-	<div class="post-content">
-		<a href={url} class="post-content">
-		<div class="post-info">
-			<div class="post-title">
-				{name}
-			</div>
-			<div class="post-date">
-				{pub_date.toString().slice(8,10)}.{pub_date.toString().slice(5,7)}.{pub_date.toString().slice(0,4)}
-			</div>
+<div class="post-shape grid-item">
+	<div class="post-info">
+		<div class="post-title">
+			<a href={url} class="plain">{frontmatter.title}</a>
 		</div>
-		<img class="post-image" src={image} />
-		{cont != '' && <div class="post-cont">{cont}</div>}
-		<div class="post-desc">
-			{desc}
+		<div class="post-date">
+			{frontmatter.pub_date.toString().slice(8,10)}.{frontmatter.pub_date.toString().slice(5,7)}.{frontmatter.pub_date.toString().slice(0,4)}
 		</div>
-		</a>
-		<TagBar tags={tags} reverse="true" />
 	</div>
+	<a href={url}><img class="post-image" src={frontmatter.image} /></a>
+	{frontmatter.cont &&
+	<div class="post-cont">{frontmatter.contribution}</div>
+	}
+	<div class="post-desc">{frontmatter.description}</div>
+	{frontmatter.tags &&
+	<TagBar tags={frontmatter.tags} reverse="true" />
+	}
 </div>

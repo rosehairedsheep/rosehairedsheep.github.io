@@ -2,7 +2,7 @@
 layout: '../../layouts/project.astro'
 title: "📺 Clikr"
 pub_date: 2025-06-10
-image: '/media/projects/proj-clikr/thumbnail.png'
+image: '/media/projects/clikr/thumbnail.png'
 description: "A survival shooter in an electronic body horror world."
 contribution: 'ui, tech art, audio'
 tags:
@@ -26,36 +26,36 @@ A survival shooter in an electronic body horror world. Made as part of a game de
 I took care of the UI side of the game, and I planned for it to be a core element of the world fantasy since the world was based on old tech. The UI was to be snappy and responsive, and full of draw and charisma.
 
 <div class="image-group">
-	<img class="image" src="/media/projects/proj-clikr/concept_hud.png" />
-	<img class="image" src="/media/projects/proj-clikr/concept_settings.png" />
+	<img class="image" src="/media/projects/clikr/concept_hud.png" />
+	<img class="image" src="/media/projects/clikr/concept_settings.png" />
 </div>
 
 Starting with the crosshair and interaction prompt, I wanted them to draw the player's attention, especially since it wasn't immediately apparent what the player could interact with in the world (such as shooting TVs with their hand). I added motion and colour when actions were available.
 
-<img class="image" src="/media/projects/proj-clikr/ui_crosshair.gif" />
+<img class="image" src="/media/projects/clikr/ui_crosshair.gif" />
 
 The inventory wanted to be visible at all times since it contained only two distinct kinds of items which were both pertinent to gameplay at all times. I made tween-based animations for receiving and using items because I needed to handle keyframes dynamically.
 
-<img class="image" src="/media/projects/proj-clikr/ui_inventory.gif" />
+<img class="image" src="/media/projects/clikr/ui_inventory.gif" />
 
 Towards the end of the project, the diegetic battery indicator fell out of the domain of the artists, and I needed to add a HUD element for it. I went with a "retro" style (this hurts to type), making sure to draw the player's attention when they were out of power, and added a bit of flair to the recharge animation.
 
-<img class="image" src="/media/projects/proj-clikr/ui_battery.gif" />
+<img class="image" src="/media/projects/clikr/ui_battery.gif" />
 
 I styled the settings menu after a CRT TV with a teletext-like program displayed. I added some light bulbs blinking in random intervals for fun.
 
-<img class="image" src="/media/projects/proj-clikr/settings_menu.gif" />
+<img class="image" src="/media/projects/clikr/settings_menu.gif" />
 
 There's also the main menu. The background moves back and forth on several layers, and some of the elements activate on a timer.
 
-<img class="image" src="/media/projects/proj-clikr/main_menu.gif" />
+<img class="image" src="/media/projects/clikr/main_menu.gif" />
 
 #### fonts
 I made a pixel font called **Recluse** for the game with both a regular and italics style, both with full ASCII support.
 
 <div class="image-group">
-	<img class="image" src="/media/projects/proj-clikr/recluse_regular.png" />
-	<img class="image" src="/media/projects/proj-clikr/recluse_italics.png" />
+	<img class="image" src="/media/projects/clikr/recluse_regular.png" />
+	<img class="image" src="/media/projects/clikr/recluse_italics.png" />
 </div>
 
 ### code
@@ -64,20 +64,20 @@ My contribution to the codebase was focused on implementing the UI and HUD. I th
 ### tech
 The idea was to make a CRT-like shader to apply to the HUD and UI elements of the game. Originally I was planning on applying a post-processing effect to an entire layer but after delving deeper into the details of the Unity render pipeline I wasn't able to find a way to pull that off for the UI layer, as it was added last and all effects applied thereafter would also influence the base game view. In the end, I made a shader and applied it to each element individually, and only had to introduce a few workaround variables (such as accounting for element rotation so that scanlines stayed horizontal to the camera) to get a satisfactory result.
 
-<img class="image" src="/media/projects/proj-clikr/shader_full.png" />
+<img class="image" src="/media/projects/clikr/shader_full.png" />
 
 Here's some better shots:
 
 <div class="image-group">
-	<img class="image" src="/media/projects/proj-clikr/shader_1.png" />
-	<img class="image" src="/media/projects/proj-clikr/shader_2.png" />
-	<img class="image" src="/media/projects/proj-clikr/shader_3.png" />
+	<img class="image" src="/media/projects/clikr/shader_1.png" />
+	<img class="image" src="/media/projects/clikr/shader_2.png" />
+	<img class="image" src="/media/projects/clikr/shader_3.png" />
 </div>
 
 ### audio
 I made a short looping background track titled **Silicon Heaven** for the game. The goal was to make it somewhat calm, peaceful, and mildly unnerving at the same time, while adding the smallest touch of whimsy with a specific melody section.
 
-<img class="image" src="/media/projects/proj-clikr/silicon_heaven.png" />
+<img class="image" src="/media/projects/clikr/silicon_heaven.png" />
 
 I also created some synthetic sound effects for the enemies and objects in the game, since they wanted to have a distinct unnatural feel.
 

@@ -11,23 +11,23 @@ import '../styles/navspace.css'
 const { table_of_contents, git_project } = Astro.props
 ---
 
-<div id="nav-space" class="nav-space">
-	<div id="nav-square" class="nav-square nav-center">
+<div class="nav-space">
+	<div class="nav-square nav-center">
 		<div class="nav-image-holder">
 			<img class="nav-picture" src=/media/_main/profile_sheep.png />
 		</div>
-		<div class="nav-item">
+		<div>
 			<h1 class="title">rose</h1>
 			<h1 class="title">haired</h1>
 			<h1 class="title">sheep</h1>
 		</div>
-		<div id="nav-buttons" class="nav-item nav-buttons">
+		<div class="nav-buttons">
 			<a href="/" class="nav-button">home</a>
 			<a href="/projects" class="nav-button">projects</a>
 			<a href="/arts" class="nav-button">arts</a>
 			<a href="/updates" class="nav-button">updates</a>
 		</div>
-		<div id="social-buttons" class="nav-item social-buttons">
+		<div class="social-buttons">
 			<IconCode class="social-button" onclick="window.open('https:\/\/github.com/rosehairedsheep','_blank');"/>
 			<IconMail class="social-button" onclick="window.open('mailto:pinkhairedsheep@gmail.com','_blank');"/>
 			<IconGame class="social-button" onclick="window.open('https:\/\/rosehairedsheep.itch.io','_blank');"/>

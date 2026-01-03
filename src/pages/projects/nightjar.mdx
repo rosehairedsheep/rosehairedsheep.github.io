@@ -2,7 +2,7 @@
 layout: '../../layouts/project.astro'
 title: "💎 Flight Of Fancy"
 pub_date: 2024-11-22
-image: '/media/projects/proj-nightjar/thumbnail.png'
+image: '/media/projects/nightjar/thumbnail.png'
 description: "A flightformer about bird love."
 contribution: ''
 tags:
@@ -27,7 +27,7 @@ A 2D level-based flightformer about bird love available for download on itch.io.
 ### code
 Everything in the game is level-based, including the main menu (the player can even win it to start the first level!). A lot of the game's elements work off of or are automatically populated based on the levels, like the level picker menu:
 
-<img class="image" src="/media/projects/proj-nightjar/level_picker.png" />
+<img class="image" src="/media/projects/nightjar/level_picker.png" />
 
 There is also an incorporated speedrun timer that cuts out loading times and displays per-level times.
 
@@ -37,24 +37,24 @@ The game's colour scheme is entirely based on black + a primary colour + a secon
 Aside from the level picker displayed above, the other interesting UI elements I created were the settings menu, and the automatically populated controls hints in-game. And yes, I did make my own custom font for the game!
 
 <div class="image-group">
-	<img class="image" src="/media/projects/proj-nightjar/settings_menu.png" />
-	<img class="image" src="/media/projects/proj-nightjar/controls_hint.png" />
+	<img class="image" src="/media/projects/nightjar/settings_menu.png" />
+	<img class="image" src="/media/projects/nightjar/controls_hint.png" />
 </div>
 
 ### tech
 I made a shader for changing the primary and secondary accent colours and assigned them each their own material. The exposed values are then manipulated through code. I also created a shader script for manipulating the vignette used to transition between levels.
 
 <div class="image-group">
-	<img class="image" src="/media/projects/proj-nightjar/shader_script.png" />
-	<img class="image" src="/media/projects/proj-nightjar/shader_script.png" />
+	<img class="image" src="/media/projects/nightjar/shader_script.png" />
+	<img class="image" src="/media/projects/nightjar/shader_script.png" />
 </div>
 
 ### art & animation
 I created an animation tree for the main character with a total of seven animations, one of them being an idle randomly triggered when the character hasn't moved for a while (I also gave the date their own idle pose). Some of the background elements play little flair animations on a random timer, but most of them are static. Here are some fun details like the player and entity sprite sheets.
 
 <div class="image-group">
-	<img class="image" src="/media/projects/proj-nightjar/player_spritesheet.png" />
-	<img class="image" src="/media/projects/proj-nightjar/entity_spritesheet.png" />
+	<img class="image" src="/media/projects/nightjar/player_spritesheet.png" />
+	<img class="image" src="/media/projects/nightjar/entity_spritesheet.png" />
 </div>
 
 
@@ -62,10 +62,10 @@ I created an animation tree for the main character with a total of seven animati
 The game's main track, called **Skyline**, is themed to sound like a bird's love call (with an additional section to represent the environmental sounds), but the further the player gets in the game, the louder a secondary melody plays, this one representing the date's response, ultimately creating a love duophony (this version is called **Loveline**).
 
 **<a href="https://is.gd/FfuzC6">Skyline</a>:**
-<img class="image" src="/media/projects/proj-nightjar/song_skyline.png" />
+<img class="image" src="/media/projects/nightjar/song_skyline.png" />
 
 **<a href="https://is.gd/ZCDK9t">Loveline</a>:**
-<img class="image" src="/media/projects/proj-nightjar/song_loveline.png" />
+<img class="image" src="/media/projects/nightjar/song_loveline.png" />
 
 ### retrospection
 #### what did i do right?
