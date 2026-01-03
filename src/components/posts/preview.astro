@@ -17,7 +17,7 @@ const { url, frontmatter } = Astro.props;
 		</div>
 	</div>
 	<a href={url}><img class="post-image" src={frontmatter.image} /></a>
-	{frontmatter.cont &&
+	{frontmatter.contribution &&
 	<div class="post-cont">{frontmatter.contribution}</div>
 	}
 	<div class="post-desc">{frontmatter.description}</div>
