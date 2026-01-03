@@ -15,14 +15,7 @@
 	gap: 10px;
 }
 
-.post-info {
-	display: flex;
-	flex-direction: column;
-}
-
 .post-title {
-	flex-grow: 1;
-
 	color: #ffe3b7;
 	font-size: 1.1em;
 	font-weight: bold;
@@ -148,11 +141,6 @@
 
 @media screen and (min-width: 800px)
 {
-	.post-info {
-		flex-direction: row;
-		flex-wrap: wrap;
-	}
-
 	.spacious {
 		padding: 30px 10%;
 	}
