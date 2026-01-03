@@ -41,7 +41,7 @@ const { tag } = Astro.params;
 const { posts } = Astro.props;
 ---
 
-<Base pageTitle={tag}>
+<Base page_title={tag}>
   <Content>
 		{posts.sort((a, b) => Date.parse(b.frontmatter.pub_date) - Date.parse(a.frontmatter.pub_date)).map((project: any) => <PostPreview
 		url={project.url}
