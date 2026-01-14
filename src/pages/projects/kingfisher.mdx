@@ -2,7 +2,7 @@
 layout: '../../layouts/project.astro'
 title: "🐍 <Kingfisher>"
 pub_date: 2024-09-07
-image: '/media/projects/proj-kingfisher/thumbnail.png'
+image: '/media/projects/kingfisher/thumbnail.png'
 description: "A HUD-based platformer."
 contribution: ''
 tags:
@@ -21,22 +21,22 @@ A shelved 2D HUD-based platformer where you control a gecko holding a mouse curs
 ### code
 Every window in the game has its own collision settings and can contain different features. For example, the full game screen is actually a window on its own with a functioning collision-enabled tilemap inside. The player can also trigger the dialogue buttons by hitting them with a ground slam.
 
-<img class="image" src="/media/projects/proj-kingfisher/hud_showcase.gif" />
+<img class="image" src="/media/projects/kingfisher/hud_showcase.gif" />
 
 Some aspects of the game are data-driven, all window data and dialogue are loaded from JSON files, and all settings and preferences are saved between sessions. There is also an in-game console which lets the player change the visual theme.
 
-<img class="image" src="/media/projects/proj-kingfisher/hud_themes.gif" />
+<img class="image" src="/media/projects/kingfisher/hud_themes.gif" />
 
 ### ui
 All UI element graphics are loaded from an atlas of a single CanvasTexture, so I can easily change the visual theme just by loading a different texture into one place in the game.
 
-<img class="image" src="/media/projects/proj-kingfisher/hud_atlas.png" />
+<img class="image" src="/media/projects/kingfisher/hud_atlas.png" />
 
 ### retrospection
 #### what did i do right?
 Looking back, this is where I started using JSONs and deserialising into custom classes / structs, albeit on a very rough level. This is a powerful tool in my arsenal nowadays, and I'm glad I started learning all the way back here. Same goes for atlas textures. While not much of the project is salvageable at this point, the amount of research I have done for it has set me on the right course for my future game dev journey.
 
-<img class="image" src="/media/projects/proj-kingfisher/window_struct.png" />
+<img class="image" src="/media/projects/kingfisher/window_struct.png" />
 
 #### what would i do different?
 This one required more planning before coding, in multiple directions. I should have at the very least looked into different ways of implementing the UI elements, more specifically whether Control or Window nodes would be the superior choice. The project also suffered from a lack of direction beyond "jumping through the UI is cool," so I ended up just lost once I arrived at the "okay, but what now?" stage. I would also handle localisation through native Godot features at this point.

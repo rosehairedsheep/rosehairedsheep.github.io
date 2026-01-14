@@ -2,7 +2,7 @@
 layout: '../../layouts/project.astro'
 title: "🚀 Kosmik"
 pub_date: 2025-08-31
-image: '/media/projects/proj-puffin/thumbnail.png'
+image: '/media/projects/puffin/thumbnail.png'
 description: "Dodging space junk like a pro."
 contribution: ''
 tags:
@@ -27,37 +27,37 @@ I am using AStar pathfinding to make sure all parts of the ship are connected du
 
 There's also some fun stuff with randomly colourshifting the individual cargo boxes to create a less monotonous view.
 
-<img class="image" src="/media/projects/proj-puffin/screen1.png" />
+<img class="image" src="/media/projects/puffin/screen1.png" />
 
 ### ui
 I created a pretty main menu with an animation for the settings popping up. Since I was controlling the exhaust hue via shaders, I had to create my own custom slider fill nodes, as the native Godot ones did not have support for user-assigned materials. I also created a second custom slider background for the hue selector, to which I applied a different shader.
 
-<img class="image" src="/media/projects/proj-puffin/main_menu.gif" />
+<img class="image" src="/media/projects/puffin/main_menu.gif" />
 
 ### tech
 The background has two variants, and both have been created using particles. Both are preloaded at the start to fill out the screen in time, and the player can switch between them at will.
 
-<img class="image" src="/media/projects/proj-puffin/background_particles.gif" />
+<img class="image" src="/media/projects/puffin/background_particles.gif" />
 
 I also created particles for the engine trail.
 
-<img class="image" src="/media/projects/proj-puffin/burner_particles.gif" />
+<img class="image" src="/media/projects/puffin/burner_particles.gif" />
 
 And a few shaders on top. In order, a shader that coloured elements roughly based on the input colour (within an intentional interval), a shader that turned the object transparent bottom-to-top based on the control value (used for the exclamation points), and a quick shader to display the hue spectrum (used as background for the hue selection slider).
 
 <div class="image-group">
-	<img class="image" src="/media/projects/proj-puffin/shader_colour.png" />
-	<img class="image" src="/media/projects/proj-puffin/shader_fill.png" />
-	<img class="image" src="/media/projects/proj-puffin/shader_hue.png" />
+	<img class="image" src="/media/projects/puffin/shader_colour.png" />
+	<img class="image" src="/media/projects/puffin/shader_fill.png" />
+	<img class="image" src="/media/projects/puffin/shader_hue.png" />
 </div>
 
 ### art
 The art is pretty minimal, but does exist. I'll showcase just some of it to not clutter this space too much.
 
 <div class="image-group">
-	<img class="image" src="/media/projects/proj-puffin/ship_parts.png" />
-	<img class="image" src="/media/projects/proj-puffin/game_icon.png" />
-	<img class="image" src="/media/projects/proj-puffin/some_ui.png" />
+	<img class="image" src="/media/projects/puffin/ship_parts.png" />
+	<img class="image" src="/media/projects/puffin/game_icon.png" />
+	<img class="image" src="/media/projects/puffin/some_ui.png" />
 </div>
 
 ### audio

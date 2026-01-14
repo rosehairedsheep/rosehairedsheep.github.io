@@ -2,7 +2,7 @@
 layout: '../../layouts/project.astro'
 title: "💪 Brosfight"
 pub_date: 2025-04-03
-image: '/media/projects/proj-brosfight/thumbnail.png'
+image: '/media/projects/brosfight/thumbnail.png'
 description: "A turn-based battler where you're the villain."
 contribution: 'concept, lead, ui, audio, programming'
 tags:
@@ -25,20 +25,20 @@ A turn-based fantasy battler where you play as the boss and your goal is to lose
 ### ui
 I handled all of the UI placement, implementation, and a lot of its visuals. Starting off with the excitement metre (the core element of the game), there is a main bar showing progress with a frame animated to the beat of the music. The animation gets more pronounced the higher the excitement is, and aligns to the different music layers playing. Below it is a log, which helps the players understand why certain actions had an effect on the metre. I made it collapsible in order to hold more of this vital information while also not being in the way if it wasn't needed. The bar also previews how much it will shift when hovering an action, to once again give the player more clarity on what is happening in the game. I felt this was especially vital with how obscure the main mechanic of the game was. To the right is an icon (drawn by the artists) representing whether or not the bar has been filled enough to win the game.
 
-<img class="image" src="/media/projects/proj-brosfight/excitement_metre.gif" />
+<img class="image" src="/media/projects/brosfight/excitement_metre.gif" />
 
 The heroes each have their health bar and a shield bar in case they have any shield active, with both showing previews of how the player's ability would affect them. They also decide on an action to take on their next turn before the player's turn, and display this intention above their heads (icons drawn by the artists). Below their resource bars are status icons displaying their current state (art also handled by the artists).
 
-<img class="image" src="/media/projects/proj-brosfight/resource_bars_intentions.gif" />
+<img class="image" src="/media/projects/brosfight/resource_bars_intentions.gif" />
 
 The third important element was the skill bar. The original plan was to fit it horizontally on the bottom, but we didn't end up having enough space there. I decided to slot it next to the boss, aligned vertically and split into two columns, but I didn't enjoy how that obscured the view of the background. I decided to have the entire skill bar collapse and hide behind the boss when it was the heroes' turn, which also served as a nice secondary indicator of when the player had actions to take. At that point, it was just a matter of adding some highlighting for the currently selected ability and adding fade-outs for conditional abilities when they weren't active and a little attention-grabbing wiggle for when they were.
 
-<img class="image" src="/media/projects/proj-brosfight/skill_bar.gif" />
+<img class="image" src="/media/projects/brosfight/skill_bar.gif" />
 
 ### audio
 I made an adaptive battle theme based on the excitement level called **When the Bros Fight**, with more instruments joining in the better the player was doing. It's structured like a dialogue between the boss and the heroes, and underlines the playful nature of the fight. <a href="https://www.youtube.com/playlist?list=PL3MtBv8hOyqRLDKV4wV2hMmBJVTVmmOx9">Find it here on YouTube with lyrics!</a>
 
-<img class="image" src="/media/projects/proj-brosfight/when_the_bros_fight.png" />
+<img class="image" src="/media/projects/brosfight/when_the_bros_fight.png" />
 
 ### code
 Around the middle of the project I took on some coding responsibilities to help alleviate pressure on the team. I mostly took care of UI implementation (which required writing custom tween functions) but handled some outside stuff as well.
